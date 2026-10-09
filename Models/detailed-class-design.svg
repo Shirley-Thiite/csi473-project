@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4137 938" width="4137" height="938" font-family="Helvetica, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTowY2RiNmQ2Ni0wZTY2LTQzNjAtOGNhNy0zOWUxNGNjM2I4ZDkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaK8ZcH/FbVhzMAhxJEgahLgAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyN2QwMjMzZi03MjVlLTQ0NzAtYjcxYy01MTE2Njc5MjZmYTFscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoh/bP+TFqltRITsAojEynAQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg09QO2k+M2ejiduy3vtg1HllxXdzJ/zUcahiwtuY32CmkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLpJse5Y9mCNMEvTEtTjkmoAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCB0DBo38pLjBfwFqidU5i18yVg/levc5FQxIY1W+11ohGRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjDZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjBjZGI2ZDY2LTBlNjYtNDM2MC04Y2E3LTM5ZTE0Y2MzYjhkOS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjk5ODZjYjlkLTZkYjEtNGExZi1hNzBiLWEwNWM3ZTJlNjg1YXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDT1A7aT4zZ6OJ27Le+2DUeWXFd3Mn/NRxqGLC25jfYKaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgghz/qjwGaYp3OYOZss5QRu+XbSvVdJsP/JlaE+nuu+96iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg4ql6fXMiAFJs/9FXX0bo/V0LSVqY8Aeu6/JMFNYabcV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQDBFfhmWyCqrII2wCKOY1upiQ12yzlgyqiRjLEIjwpIbeFy24OVIhE7Pu5DxrPBQTabzDP6ySeMSGTXAxRxRS5s=</c2pa:manifest></metadata>
+<rect width="100%" height="100%" fill="#fff"/>
+<polyline points="1489.3,157.0 711.5,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="720.0,335.1 711.5,342.0 722.3,344.4" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="1554.3,157.0 1091.8,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="1099.3,333.9 1091.8,342.0 1102.8,342.8" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="1619.4,157.0 1471.5,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="1474.0,331.3 1471.5,342.0 1481.4,337.2" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="1684.4,157.0 1849.0,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="1838.8,337.8 1849.0,342.0 1846.0,331.4" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="1749.5,157.0 2084.9,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="2073.9,341.4 2084.9,342.0 2078.5,333.0" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="1814.5,157.0 2439.9,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="2429.1,343.8 2439.9,342.0 2431.8,334.6" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="2478.8,172.0 1898.5,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="1906.7,334.6 1898.5,342.0 1909.4,343.8" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="2565.4,172.0 2233.2,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="2239.8,333.2 2233.2,342.0 2244.2,341.7" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="2651.9,172.0 2536.4,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="2538.0,331.1 2536.4,342.0 2545.9,336.5" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="2738.5,172.0 2827.6,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="2818.8,335.4 2827.6,342.0 2827.2,331.0" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="2825.0,172.0 3223.6,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="3212.6,342.5 3223.6,342.0 3216.4,333.7" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="2911.6,172.0 3619.6,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="3608.9,344.3 3619.6,342.0 3611.1,335.0" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="2463.4,70.0 2463.4,36.0 252.8,36.0 252.8,70.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="248.0,60.1 252.8,70.0 257.6,60.1" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="192.0,142.0 192.0,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="187.2,332.1 192.0,342.0 196.8,332.1" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="319.7,142.0 503.2,342.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="493.0,337.9 503.2,342.0 500.0,331.5" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="960.0,378.0 900.0,378.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="909.9,373.2 900.0,378.0 909.9,382.8" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="528.0,470.0 545.6,580.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="539.3,571.0 545.6,580.0 548.8,569.5" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="825.6,470.0 1108.8,580.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="1097.8,580.9 1108.8,580.0 1101.3,572.0" fill="none" stroke="#000" stroke-width="1.4"/>
+<polyline points="2827.6,470.0 2827.6,580.0" fill="none" stroke="#000" stroke-width="1.1"/>
+<polyline points="2822.8,570.1 2827.6,580.0 2832.4,570.1" fill="none" stroke="#000" stroke-width="1.4"/>
+<line x1="192.0" y1="580.0" x2="192.0" y2="429.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="192.0,413.0 183.0,429.0 201.0,429.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<line x1="1552.8" y1="580.0" x2="1552.8" y2="429.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="1552.8,413.0 1543.8,429.0 1561.8,429.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<line x1="1871.0" y1="580.0" x2="1871.0" y2="459.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="1871.0,443.0 1862.0,459.0 1880.0,459.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<line x1="2150.8" y1="580.0" x2="2150.8" y2="444.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="2150.8,428.0 2141.8,444.0 2159.8,444.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<line x1="2482.8" y1="580.0" x2="2482.8" y2="459.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="2482.8,443.0 2473.8,459.0 2491.8,459.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<line x1="3223.6" y1="580.0" x2="3223.6" y2="444.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="3223.6,428.0 3214.6,444.0 3232.6,444.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<line x1="3619.6" y1="580.0" x2="3619.6" y2="459.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="3619.6,443.0 3610.6,459.0 3628.6,459.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<line x1="3977.2" y1="342.0" x2="3977.2" y2="172.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="3977.2,156.0 3968.2,172.0 3986.2,172.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<line x1="460.1" y1="807" x2="781.2" y2="807" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<line x1="460.1" y1="852" x2="460.1" y2="807" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<line x1="621.2" y1="852" x2="621.2" y2="807" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<line x1="781.2" y1="852" x2="781.2" y2="807" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<line x1="687.2" y1="807" x2="687.2" y2="682" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polygon points="687.2,666.0 678.2,682.0 696.2,682.0" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<rect x="1458.3" y="70.0" width="387.2" height="87.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="1651.9" y="85.0" text-anchor="middle" font-size="11.5" font-weight="bold">ReportService</text>
+<line x1="1458.3000000000002" y1="92.0" x2="1845.5" y2="92.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="1458.3000000000002" y1="104.0" x2="1845.5" y2="104.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="1466.3000000000002" y="119.0" font-size="11">+submitFoundReport(String cmd, String actor) : String</text>
+<text x="1466.3000000000002" y="134.0" font-size="11">-checkDuplicate(String cmd, String actor) : Optional&lt;Item&gt;</text>
+<text x="1466.3000000000002" y="149.0" font-size="11">-persist(Item item, CustodyEntry custodyEntry)</text>
+<rect x="2437.6" y="70.0" width="515.2" height="102.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="2695.2" y="85.0" text-anchor="middle" font-size="11.5" font-weight="bold">ClaimService</text>
+<line x1="2437.6" y1="92.0" x2="2952.8" y2="92.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="2437.6" y1="104.0" x2="2952.8" y2="104.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="2445.6" y="119.0" font-size="11">+submitClaim(String cmd, String actor) : String</text>
+<text x="2445.6" y="134.0" font-size="11">+decide(String claimId, String decision, String admin, String reason) : String</text>
+<text x="2445.6" y="149.0" font-size="11">-appendCustody(Item item, String newStatus, String admin) : CustodyEntry</text>
+<text x="2445.6" y="164.0" font-size="11">-createHandover(Claim claim, String admin) : HandoverRecord</text>
+<rect x="40.0" y="70.0" width="304.0" height="72.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="192.0" y="85.0" text-anchor="middle" font-size="11.5" font-weight="bold">NotificationService</text>
+<line x1="40.0" y1="92.0" x2="344.0" y2="92.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="40.0" y1="104.0" x2="344.0" y2="104.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="48.0" y="119.0" font-size="11">+notifyClaimant(Claim claim, String decision)</text>
+<text x="48.0" y="134.0" font-size="11">+notifyMatch(Item item, String claimant)</text>
+<rect x="404.0" y="342.0" width="496.0" height="128.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="652.0" y="357.0" text-anchor="middle" font-size="11.5" font-weight="bold">Item</text>
+<line x1="404.0" y1="364.0" x2="900.0" y2="364.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="412.0" y="379.0" font-size="11">-String itemId</text>
+<text x="412.0" y="394.0" font-size="11">-String status</text>
+<text x="412.0" y="409.0" font-size="11">-String reportType</text>
+<text x="412.0" y="424.0" font-size="11">-String currentState</text>
+<line x1="404.0" y1="432.0" x2="900.0" y2="432.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="412.0" y="447.0" font-size="11">+canTransitionTo(String newStatus) : boolean</text>
+<text x="412.0" y="462.0" font-size="11">+transitionTo(String newStatus, String actor, String reason) : CustodyEntry</text>
+<rect x="2650.0" y="342.0" width="355.2" height="128.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="2827.6" y="357.0" text-anchor="middle" font-size="11.5" font-weight="bold">Claim</text>
+<line x1="2650.0" y1="364.0" x2="3005.2" y2="364.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="2658.0" y="379.0" font-size="11">-String claimId</text>
+<text x="2658.0" y="394.0" font-size="11">-String status</text>
+<text x="2658.0" y="409.0" font-size="11">-String decidedBy</text>
+<text x="2658.0" y="424.0" font-size="11">-String decisionReason</text>
+<line x1="2650.0" y1="432.0" x2="3005.2" y2="432.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="2658.0" y="447.0" font-size="11">+decide(String decision, String admin, String reason)</text>
+<text x="2658.0" y="462.0" font-size="11">+canBeDecidedBy(String admin) : boolean</text>
+<rect x="1030.4" y="580.0" width="156.8" height="162.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="1108.8" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">ChainOfCustodyEntry</text>
+<line x1="1030.4" y1="602.0" x2="1187.2" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="1038.4" y="617.0" font-size="11">-String entryId</text>
+<text x="1038.4" y="632.0" font-size="11">-String itemId</text>
+<text x="1038.4" y="647.0" font-size="11">-String category</text>
+<text x="1038.4" y="662.0" font-size="11">-String previousStatus</text>
+<text x="1038.4" y="677.0" font-size="11">-String newStatus</text>
+<text x="1038.4" y="692.0" font-size="11">-String actorId</text>
+<text x="1038.4" y="707.0" font-size="11">-Date timestamp</text>
+<text x="1038.4" y="722.0" font-size="11">-String relatedClaimId</text>
+<line x1="1030.4" y1="730.0" x2="1187.2" y2="730.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="2749.2" y="580.0" width="156.8" height="117.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="2827.6" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">HandoverRecord</text>
+<line x1="2749.2" y1="602.0" x2="2906.0" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="2757.2" y="617.0" font-size="11">-String handoverId</text>
+<text x="2757.2" y="632.0" font-size="11">-String claimId</text>
+<text x="2757.2" y="647.0" font-size="11">-String itemId</text>
+<text x="2757.2" y="662.0" font-size="11">-Date pickupTime</text>
+<text x="2757.2" y="677.0" font-size="11">-String pickupLocation</text>
+<line x1="2749.2" y1="685.0" x2="2906.0" y2="685.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="960.0" y="342.0" width="329.6" height="72.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="1124.8" y="357.0" text-anchor="middle" font-size="11.5" font-weight="bold">ItemFactory</text>
+<line x1="960.0" y1="364.0" x2="1289.6" y2="364.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="960.0" y1="376.0" x2="1289.6" y2="376.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="968.0" y="391.0" font-size="11">+createFoundItem(String cmd, String actor) : Item</text>
+<text x="968.0" y="406.0" font-size="11">+createLostItem(String cmd, String actor) : Item</text>
+<rect x="404.0" y="580.0" width="566.4" height="86.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="687.2" y="592.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="687.2" y="609.0" text-anchor="middle" font-size="11.5" font-weight="bold">ItemState</text>
+<line x1="404.0" y1="616.0" x2="970.4" y2="616.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="404.0" y1="628.0" x2="970.4" y2="628.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="412.0" y="643.0" font-size="11">+canTransitionTo(String newStatus) : boolean</text>
+<text x="412.0" y="658.0" font-size="11">+transitionTo(Item item, String newStatus, String actor, String reason) : CustodyEntry</text>
+<rect x="726.2" y="852.0" width="110.0" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="781.2" y="867.0" text-anchor="middle" font-size="11.5" font-weight="bold">LostState</text>
+<line x1="726.2" y1="874.0" x2="836.2" y2="874.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="726.2" y1="886.0" x2="836.2" y2="886.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="566.2" y="852.0" width="110.0" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="621.2" y="867.0" text-anchor="middle" font-size="11.5" font-weight="bold">FoundState</text>
+<line x1="566.2" y1="874.0" x2="676.2" y2="874.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="566.2" y1="886.0" x2="676.2" y2="886.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="404.0" y="852.0" width="112.2" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="460.1" y="867.0" text-anchor="middle" font-size="11.5" font-weight="bold">ResolvedState</text>
+<line x1="404.0" y1="874.0" x2="516.2" y2="874.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="404.0" y1="886.0" x2="516.2" y2="886.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="2375.6" y="342.0" width="214.4" height="101.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="2482.8" y="354.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="2482.8" y="371.0" text-anchor="middle" font-size="11.5" font-weight="bold">ItemRepository</text>
+<line x1="2375.6" y1="378.0" x2="2590.0" y2="378.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="2375.6" y1="390.0" x2="2590.0" y2="390.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="2383.6" y="405.0" font-size="11">+save(Item item)</text>
+<text x="2383.6" y="420.0" font-size="11">+findById(String itemId) : Item</text>
+<text x="2383.6" y="435.0" font-size="11">+findDuplicate(...) : Item</text>
+<rect x="3442.0" y="342.0" width="355.2" height="101.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="3619.6" y="354.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="3619.6" y="371.0" text-anchor="middle" font-size="11.5" font-weight="bold">ClaimRepository</text>
+<line x1="3442.0" y1="378.0" x2="3797.2" y2="378.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="3442.0" y1="390.0" x2="3797.2" y2="390.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="3450.0" y="405.0" font-size="11">+save(Claim claim)</text>
+<text x="3450.0" y="420.0" font-size="11">+findById(String claimId) : Claim</text>
+<text x="3450.0" y="435.0" font-size="11">+findActive(String itemId, String claimantId) : Claim</text>
+<rect x="1986.0" y="342.0" width="329.6" height="86.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="2150.8" y="354.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="2150.8" y="371.0" text-anchor="middle" font-size="11.5" font-weight="bold">CustodyRepository</text>
+<line x1="1986.0" y1="378.0" x2="2315.6" y2="378.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="1986.0" y1="390.0" x2="2315.6" y2="390.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="1994.0" y="405.0" font-size="11">+append(CustodyEntry entry)</text>
+<text x="1994.0" y="420.0" font-size="11">+findByItemId(String itemId) : List&lt;CustodyEntry&gt;</text>
+<rect x="1349.6" y="342.0" width="406.4" height="71.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="1552.8" y="354.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="1552.8" y="371.0" text-anchor="middle" font-size="11.5" font-weight="bold">EvidenceRepository</text>
+<line x1="1349.6" y1="378.0" x2="1756.0" y2="378.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="1349.6" y1="390.0" x2="1756.0" y2="390.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="1357.6" y="405.0" font-size="11">+store(String itemId, String evidence, String actor) : String</text>
+<rect x="3065.2" y="342.0" width="316.8" height="86.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="3223.6" y="354.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="3223.6" y="371.0" text-anchor="middle" font-size="11.5" font-weight="bold">HandoverRepository</text>
+<line x1="3065.2" y1="378.0" x2="3382.0" y2="378.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="3065.2" y1="390.0" x2="3382.0" y2="390.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="3073.2" y="405.0" font-size="11">+save(HandoverRecord record)</text>
+<text x="3073.2" y="420.0" font-size="11">+findByClaimId(String claimId) : HandoverRecord</text>
+<rect x="1816.0" y="342.0" width="110.0" height="101.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="1871.0" y="354.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="1871.0" y="371.0" text-anchor="middle" font-size="11.5" font-weight="bold">UnitOfWork</text>
+<line x1="1816.0" y1="378.0" x2="1926.0" y2="378.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="1816.0" y1="390.0" x2="1926.0" y2="390.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="1824.0" y="405.0" font-size="11">+begin()</text>
+<text x="1824.0" y="420.0" font-size="11">+commit()</text>
+<text x="1824.0" y="435.0" font-size="11">+rollback()</text>
+<rect x="3857.2" y="70.0" width="240.0" height="86.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="3977.2" y="82.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="3977.2" y="99.0" text-anchor="middle" font-size="11.5" font-weight="bold">IdentityProvider</text>
+<line x1="3857.2" y1="106.0" x2="4097.2" y2="106.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="3857.2" y1="118.0" x2="4097.2" y2="118.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="3865.2" y="133.0" font-size="11">+verifyToken(String token) : String</text>
+<text x="3865.2" y="148.0" font-size="11">+issueSession(String user) : String</text>
+<rect x="40.0" y="342.0" width="304.0" height="71.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="192.0" y="354.0" text-anchor="middle" font-size="10" font-weight="bold">&lt;&lt;interface&gt;&gt;</text>
+<text x="192.0" y="371.0" text-anchor="middle" font-size="11.5" font-weight="bold">EmailSender</text>
+<line x1="40.0" y1="378.0" x2="344.0" y2="378.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="40.0" y1="390.0" x2="344.0" y2="390.0" stroke="#2E5E7E" stroke-width="1"/>
+<text x="48.0" y="405.0" font-size="11">+send(String to, String subject, String body)</text>
+<rect x="2393.4" y="580.0" width="178.8" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="2482.8" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">PostgresItemRepository</text>
+<line x1="2393.3999999999996" y1="602.0" x2="2572.2" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="2393.3999999999996" y1="614.0" x2="2572.2" y2="614.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="3526.5" y="580.0" width="186.2" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="3619.6" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">PostgresClaimRepository</text>
+<line x1="3526.5" y1="602.0" x2="3712.7" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="3526.5" y1="614.0" x2="3712.7" y2="614.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="2042.9" y="580.0" width="215.8" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="2150.8" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">EventStoreCustodyRepository</text>
+<line x1="2042.9" y1="602.0" x2="2258.7" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="2042.9" y1="614.0" x2="2258.7" y2="614.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="1430.1" y="580.0" width="245.4" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="1552.8" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">EncryptedBlobEvidenceRepository</text>
+<line x1="1430.1" y1="602.0" x2="1675.5" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="1430.1" y1="614.0" x2="1675.5" y2="614.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="3119.4" y="580.0" width="208.4" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="3223.6" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">PostgresHandoverRepository</text>
+<line x1="3119.4" y1="602.0" x2="3327.8" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="3119.4" y1="614.0" x2="3327.8" y2="614.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="1796.4" y="580.0" width="149.2" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="1871.0" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">PostgresUnitOfWork</text>
+<line x1="1796.4" y1="602.0" x2="1945.6" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="1796.4" y1="614.0" x2="1945.6" y2="614.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="3891.5" y="342.0" width="171.4" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="3977.2" y="357.0" text-anchor="middle" font-size="11.5" font-weight="bold">UniversityOidcAdapter</text>
+<line x1="3891.5" y1="364.0" x2="4062.9" y2="364.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="3891.5" y1="376.0" x2="4062.9" y2="376.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="124.8" y="580.0" width="134.4" height="46.0" fill="#72CBF2" stroke="#2E5E7E" stroke-width="1.2"/>
+<text x="192.0" y="595.0" text-anchor="middle" font-size="11.5" font-weight="bold">SmtpEmailAdapter</text>
+<line x1="124.8" y1="602.0" x2="259.2" y2="602.0" stroke="#2E5E7E" stroke-width="1"/>
+<line x1="124.8" y1="614.0" x2="259.2" y2="614.0" stroke="#2E5E7E" stroke-width="1"/>
+<rect x="1086.6" y="241.5" width="27.6" height="12" fill="#fff"/>
+<text x="1100.4" y="251.0" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="1309.3" y="241.5" width="27.6" height="12" fill="#fff"/>
+<text x="1323.1" y="251.0" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="1531.6" y="241.5" width="27.6" height="12" fill="#fff"/>
+<text x="1545.4" y="251.0" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="1752.9" y="241.5" width="27.6" height="12" fill="#fff"/>
+<text x="1766.7" y="251.0" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="1903.4" y="241.5" width="27.6" height="12" fill="#fff"/>
+<text x="1917.2" y="251.0" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="2113.4" y="241.5" width="27.6" height="12" fill="#fff"/>
+<text x="2127.2" y="251.0" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="2174.9" y="249.0" width="27.6" height="12" fill="#fff"/>
+<text x="2188.7" y="258.5" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="2385.5" y="249.0" width="27.6" height="12" fill="#fff"/>
+<text x="2399.3" y="258.5" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="2580.4" y="249.0" width="27.6" height="12" fill="#fff"/>
+<text x="2594.2" y="258.5" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="2769.2" y="249.0" width="27.6" height="12" fill="#fff"/>
+<text x="2783.0" y="258.5" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="3010.5" y="249.0" width="27.6" height="12" fill="#fff"/>
+<text x="3024.3" y="258.5" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="3251.8" y="249.0" width="27.6" height="12" fill="#fff"/>
+<text x="3265.6" y="258.5" text-anchor="middle" font-size="9.5">uses</text>
+<rect x="1322.7" y="28.0" width="70.8" height="12" fill="#fff"/>
+<text x="1358.1" y="37.5" text-anchor="middle" font-size="9.5">notifies via</text>
+<rect x="164.7" y="234.0" width="54.6" height="12" fill="#fff"/>
+<text x="192.0" y="243.5" text-anchor="middle" font-size="9.5">sends via</text>
+<rect x="378.7" y="234.0" width="65.4" height="12" fill="#fff"/>
+<text x="411.4" y="243.5" text-anchor="middle" font-size="9.5">notifies on</text>
+<rect x="908.1" y="370.0" width="43.8" height="12" fill="#fff"/>
+<text x="930.0" y="379.5" text-anchor="middle" font-size="9.5">creates</text>
+<rect x="509.5" y="517.0" width="54.6" height="12" fill="#fff"/>
+<text x="536.8" y="526.5" text-anchor="middle" font-size="9.5">has state</text>
+<rect x="945.3" y="517.0" width="43.8" height="12" fill="#fff"/>
+<text x="967.2" y="526.5" text-anchor="middle" font-size="9.5">records</text>
+<rect x="2792.2" y="517.0" width="70.8" height="12" fill="#fff"/>
+<text x="2827.6" y="526.5" text-anchor="middle" font-size="9.5">resolves via</text>
+</svg>
