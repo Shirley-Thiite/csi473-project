@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found System</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg: #F3F4F6;
+            --surface: #FFFFFF;
+            --text-main: #111827;
+            --text-muted: #6B7280;
+            --border: #E5E7EB;
+            --error: #DC2626;
+            --error-bg: #FEE2E2;
+            --success: #10B981;
+            --success-bg: #D1FAE5;
+            --warning: #F59E0B;
+            --warning-bg: #FEF3C7;
+        }
+
+        * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+        body { margin: 0; background-color: var(--bg); color: var(--text-main); display: flex; justify-content: center; min-height: 100vh; }
+
+        #app { width: 100%; max-width: 600px; background: var(--surface); min-height: 100vh; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; }
+
+        /* Header */
+        header { padding: 16px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: var(--surface); position: sticky; top: 0; z-index: 10; }
+        header h1 { margin: 0; font-size: 1.25rem; color: var(--primary); cursor: pointer; }
+        .user-info { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; }
+
+        /* Main Content */
+        main { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; gap: 20px; }
+
+        /* Typography */
+        h2 { margin: 0 0 8px 0; font-size: 1.5rem; }
+        h3 { margin: 0 0 12px 0; font-size: 1.125rem; }
+        p { margin: 0 0 16px 0; color: var(--text-muted); line-height: 1.5; }
+        .subtitle { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 24px; }
+
+        /* Forms */
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 6px; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; background: var(--surface); color: var(--text-main); transition: border-color 0.2s; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1); }
+        textarea { resize: vertical; min-height: 100px; }
+        .help-text { font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; }
+
+        /* Buttons */
+        button { padding: 12px 20px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s; width: 100%; display: flex; justify-content: center; align-items: center; text-decoration: none; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-hover); }
+        .btn-secondary { background: var(--surface); color: var(--text-main); border: 1px solid var(--border); }
+        .btn-secondary:hover { background: var(--bg); }
+        .btn-danger { background: var(--error); color: white; }
+        .btn-danger:hover { background: #B91C1C; }
+        .btn-group { display: flex; gap: 12px; margin-top: 24px; }
+        .btn-group button { flex: 1; }
+
+        /* Cards & Lists */
+        .card { border: 1px solid var(--border); border-radius: 12px; padding: 20px; background: var(--surface); cursor: pointer; transition: border-color 0.2s, transform 0.1s; display: block; text-decoration: none; color: inherit; }
+        .card:hover { border-color: var(--primary); transform: translateY(-1px); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .card-title { font-weight: 700; font-size: 1.125rem; }
+        .badge { font-size: 0.75rem; padding: 4px 8px; border-radius: 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .badge-pending { background: var(--warning-bg); color: #92400E; }
+        .badge-approved { background: var(--success-bg); color: #065F46; }
+        .badge-rejected { background: var(--error-bg); color: #991B1B; }
+        .badge-lost { background: var(--error-bg); color: #991B1B; }
+
+        /* Alerts */
+        .alert { padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        .alert-error { background: var(--error-bg); color: var(--error); border: 1px solid #FCA5A5; }
+        .alert-success { background: var(--success-bg); color: #047857; border: 1px solid #6EE7B7; }
+        .alert-warning { background: var(--warning-bg); color: #92400E; border: 1px solid #FCD34D; }
+
+        /* Utility */
+        .hidden { display: none !important; }
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 24px; }
+        .flex-between { display: flex; justify-content: space-between; align-items: center; }
+        
+        /* Specific Views */
+        .login-container { display: flex; flex-direction: column; justify-content: center; flex-grow: 1; max-width: 400px; margin: 0 auto; width: 100%; }
+        .divider { display: flex; align-items: center; text-align: center; margin: 24px 0; color: var(--text-muted); font-size: 0.875rem; }
+        .divider::before, .divider::after { content: ''; flex: 1; border-bottom: 1px solid var(--border); }
+        .divider span { padding: 0 16px; }
+
+        .search-bar { display: flex; gap: 12px; margin-bottom: 24px; }
+        .search-bar input { flex-grow: 1; }
+        .search-bar button { width: auto; }
+
+        .detail-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .detail-label { color: var(--text-muted); font-size: 0.875rem; font-weight: 500; }
+        .detail-value { font-weight: 600; text-align: right; }
+        .private-text { font-style: italic; color: var(--text-muted); font-weight: 400; }
+
+        .evidence-masked { background: var(--bg); padding: 24px; border-radius: 8px; text-align: center; border: 2px dashed var(--border); }
+        
+        .nav-tabs { display: flex; gap: 16px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+        .nav-tab { padding: 8px 0; cursor: pointer; font-weight: 600; color: var(--text-muted); border-bottom: 2px solid transparent; text-decoration: none; }
+        .nav-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <header id="main-header" class="hidden">
+        <h1 onclick="navigate('home')">Lost & Found</h1>
+        <div class="user-info">
+            <span id="user-name" style="font-weight: 600;"></span>
+            <span id="user-role" class="badge badge-pending" style="font-size: 0.7rem;"></span>
+            <button id="logout-btn" class="btn-secondary" style="width: auto; padding: 6px 12px; font-size: 0.875rem;">Logout</button>
+        </div>
+    </header>
+
+    <main id="content">
+        <!-- Views render here -->
+    </main>
+</div>
+
+<script>
+    // --- Database Setup (localStorage) ---
+    const db = {
+        get: (key) => JSON.parse(localStorage.getItem(key) || '[]'),
+        set: (key, data) => localStorage.setItem(key, JSON.stringify(data)),
+        init: function() {
+            if (!localStorage.getItem('lf_initialized')) {
+                // 1. Seed Users
+                const users = [
+                    { id: 'U-1', name: 'Olga (Admin)', email: 'admin@university.edu', password: 'admin123', role: 'ADMIN' },
+                    { id: 'U-2', name: 'Thabo (Security)', email: 'thabo@university.edu', password: 'security123', role: 'SECURITY' },
+                    { id: 'U-3', name: 'Naledi (Student)', email: 'naledi@university.edu', password: 'student123', role: 'STUDENT' },
+                    { id: 'U-4', name: 'Kabelo (Student)', email: 'kabelo@university.edu', password: 'student123', role: 'STUDENT' }
+                ];
+                this.set('lf_users', users);
+
+                // 2. Seed Items
+                const items = [
+                    // FOUND ITEMS
+                    { id: 'ITM-1001', category: 'Electronics', description: 'Black smartphone with cracked top-left corner', location: 'Student Center Desk', dateReported: '2026-10-23T14:30:00Z', type: 'FOUND', status: 'FOUND', reporterId: 'U-2' },
+                    { id: 'ITM-1002', category: 'Accessories', description: 'Blue backpack with a red tag', location: 'Library 2nd Floor', dateReported: '2026-10-24T10:15:00Z', type: 'FOUND', status: 'FOUND', reporterId: 'U-2' },
+                    { id: 'ITM-1003', category: 'Keys', description: 'Car keys with a Toyota keychain', location: 'Parking Lot B', dateReported: '2026-10-25T08:45:00Z', type: 'FOUND', status: 'FOUND', reporterId: 'U-2' },
+                    { id: 'ITM-1004', category: 'Electronics', description: 'White Apple AirPods Pro', location: 'Science Building Lab 3', dateReported: '2026-10-26T16:20:00Z', type: 'FOUND', status: 'FOUND', reporterId: 'U-2' },
+                    { id: 'ITM-1005', category: 'Clothing', description: 'Grey hoodie with university logo', location: 'Sports Hall', dateReported: '2026-10-26T18:00:00Z', type: 'FOUND', status: 'FOUND', reporterId: 'U-2' },
+                    
+                    // LOST ITEMS
+                    { id: 'ITM-1006', category: 'Electronics', description: 'Lost black Samsung Galaxy phone', location: 'Student Center', dateReported: '2026-10-23T12:00:00Z', type: 'LOST', status: 'LOST', reporterId: 'U-3' },
+                    { id: 'ITM-1007', category: 'Accessories', description: 'Lost blue backpack with red tag', location: 'Library', dateReported: '2026-10-24T09:00:00Z', type: 'LOST', status: 'LOST', reporterId: 'U-3' },
+                    { id: 'ITM-1008', category: 'ID Cards', description: 'Student ID card for Naledi', location: 'Cafeteria', dateReported: '2026-10-25T13:30:00Z', type: 'LOST', status: 'LOST', reporterId: 'U-3' },
+                    { id: 'ITM-1009', category: 'Wallet', description: 'Brown leather wallet with no cash', location: 'Bus Stop', dateReported: '2026-10-26T07:15:00Z', type: 'LOST', status: 'LOST', reporterId: 'U-4' }
+                ];
+                this.set('lf_items', items);
+
+                // 3. Seed Claims
+                const claims = [
+                    { id: 'CLM-014', itemId: 'ITM-1001', claimantId: 'U-3', statement: 'The lock screen is a photo of my dog. The crack is on the top left.', serial: 'IMEI-356938035643809', status: 'PENDING', dateSubmitted: '2026-10-27T10:42:00Z' },
+                    { id: 'CLM-015', itemId: 'ITM-1002', claimantId: 'U-3', statement: 'It has a red tag with my student number on it.', serial: '', status: 'PENDING', dateSubmitted: '2026-10-27T11:00:00Z' },
+                    { id: 'CLM-016', itemId: 'ITM-1004', claimantId: 'U-4', statement: 'They have a small scratch on the left ear.', serial: '', status: 'APPROVED', dateSubmitted: '2026-10-26T18:30:00Z', rejectReason: '' }
+                ];
+                this.set('lf_claims', claims);
+
+                // 4. Seed Chain of Custody Logs
+                const custody = [
+                    { logId: 'LOG-1', itemId: 'ITM-1001', action: 'ITEM_LOGGED_FOUND', actorName: 'Thabo (Security)', timestamp: '2026-10-23T14:30:00Z', details: 'Item reported at Student Center Desk.' },
+                    { logId: 'LOG-2', itemId: 'ITM-1002', action: 'ITEM_LOGGED_FOUND', actorName: 'Thabo (Security)', timestamp: '2026-10-24T10:15:00Z', details: 'Item reported at Library 2nd Floor.' },
+                    { logId: 'LOG-3', itemId: 'ITM-1003', action: 'ITEM_LOGGED_FOUND', actorName: 'Thabo (Security)', timestamp: '2026-10-25T08:45:00Z', details: 'Item reported at Parking Lot B.' },
+                    { logId: 'LOG-4', itemId: 'ITM-1004', action: 'ITEM_LOGGED_FOUND', actorName: 'Thabo (Security)', timestamp: '2026-10-26T16:20:00Z', details: 'Item reported at Science Building Lab 3.' },
+                    { logId: 'LOG-5', itemId: 'ITM-1006', action: 'ITEM_REPORTED_LOST', actorName: 'Naledi (Student)', timestamp: '2026-10-23T12:00:00Z', details: 'Item reported lost at Student Center.' },
+                    { logId: 'LOG-6', itemId: 'ITM-1007', action: 'ITEM_REPORTED_LOST', actorName: 'Naledi (Student)', timestamp: '2026-10-24T09:00:00Z', details: 'Item reported lost at Library.' },
+                    { logId: 'LOG-7', itemId: 'ITM-1004', action: 'CLAIM_APPROVED_HANDOVER', actorName: 'Olga (Admin)', timestamp: '2026-10-27T09:00:00Z', details: 'Item handed over to claimant Kabelo.' }
+                ];
+                this.set('lf_custody', custody);
+
+                localStorage.setItem('lf_initialized', 'true');
+            }
+        }
+    };
+    db.init();
+
+    // --- State Management ---
+    let state = {
+        currentUser: JSON.parse(sessionStorage.getItem('lf_currentUser')) || null,
+        view: 'login',
+        data: { itemId: null, claimId: null, filter: 'FOUND' } // filter for home view
+    };
+
+    function saveSession() {
+        if (state.currentUser) sessionStorage.setItem('lf_currentUser', JSON.stringify(state.currentUser));
+        else sessionStorage.removeItem('lf_currentUser');
+    }
+
+    function navigate(view, data = {}) {
+        state.view = view;
+        state.data = { ...state.data, ...data };
+        render();
+        window.scrollTo(0, 0);
+    }
+
+    document.getElementById('logout-btn').addEventListener('click', () => {
+        state.currentUser = null;
+        saveSession();
+        navigate('login');
+    });
+
+    // --- Views ---
+
+    function render() {
+        const header = document.getElementById('main-header');
+        const content = document.getElementById('content');
+
+        if (state.currentUser) {
+            header.classList.remove('hidden');
+            document.getElementById('user-name').textContent = state.currentUser.name;
+            document.getElementById('user-role').textContent = state.currentUser.role;
+            document.getElementById('user-role').className = `badge ${state.currentUser.role === 'ADMIN' ? 'badge-approved' : 'badge-pending'}`;
+        } else {
+            header.classList.add('hidden');
+        }
+
+        content.innerHTML = '';
+        switch (state.view) {
+            case 'login': renderLogin(content); break;
+            case 'register': renderRegister(content); break;
+            case 'home': renderHome(content); break;
+            case 'report-lost': renderReportLost(content); break;
+            case 'report-found': renderReportFound(content); break;
+            case 'item-detail': renderItemDetail(content); break;
+            case 'submit-claim': renderSubmitClaim(content); break;
+            case 'my-claims': renderMyClaims(content); break;
+            case 'admin-claims': renderAdminClaims(content); break;
+            case 'review-claim': renderReviewClaim(content); break;
+            case 'handover': renderHandover(content); break;
+            case 'custody-log': renderCustodyLog(content); break;
+        }
+    }
+
+    // --- Auth Views ---
+
+    function renderLogin(container) {
+        container.innerHTML = `
+            <div class="login-container">
+                <div class="text-center mb-4">
+                    <h2>Welcome Back</h2>
+                    <p class="subtitle">Sign in to report or claim items</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="login-email" placeholder="student@university.edu">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" placeholder="••••••••">
+                </div>
+                <div id="login-error" class="alert alert-error hidden"></div>
+                
+                <button class="btn-primary mt-4" onclick="handleLogin()">Sign In</button>
+                
+                <div class="divider"><span>or</span></div>
+                <button class="btn-secondary" onclick="navigate('register')">Create an Account</button>
+            </div>
+        `;
+    }
+
+    function renderRegister(container) {
+        container.innerHTML = `
+            <div class="login-container">
+                <div class="text-center mb-4">
+                    <h2>Create Account</h2>
+                    <p class="subtitle">Join the Campus Lost & Found</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="reg-name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>University Email</label>
+                    <input type="email" id="reg-email" placeholder="j.doe@university.edu">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-password" placeholder="Create a strong password">
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select id="reg-role">
+                        <option value="STUDENT">Student / Staff</option>
+                        <option value="SECURITY">Security Personnel</option>
+                    </select>
+                </div>
+                <div id="reg-error" class="alert alert-error hidden"></div>
+                
+                <button class="btn-primary mt-4" onclick="handleRegister()">Register</button>
+                <button class="btn-secondary mt-4" onclick="navigate('login')">Back to Login</button>
+            </div>
+        `;
+    }
+
+    // --- Core Views ---
+
+    function renderHome(container) {
+        const allItems = db.get('lf_items');
+        
+        // Filter based on toggle
+        let filteredItems;
+        if (state.data.filter === 'LOST') {
+            filteredItems = allItems.filter(i => i.type === 'LOST');
+            // If not admin or security, only show their own lost items
+            if (state.currentUser.role === 'STUDENT') {
+                filteredItems = filteredItems.filter(i => i.reporterId === state.currentUser.id);
+            }
+        } else {
+            filteredItems = allItems.filter(i => i.type === 'FOUND' && i.status === 'FOUND');
+        }
+
+        // Sort by date desc
+        filteredItems.sort((a, b) => new Date(b.dateReported) - new Date(a.dateReported));
+
+        container.innerHTML = `
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search by description or location...">
+                <button class="btn-primary" onclick="handleSearch()">Search</button>
+            </div>
+
+            <div class="nav-tabs">
+                <div class="nav-tab ${state.data.filter === 'FOUND' ? 'active' : ''}" onclick="state.data.filter='FOUND'; render();">Found Items</div>
+                <div class="nav-tab ${state.data.filter === 'LOST' ? 'active' : ''}" onclick="state.data.filter='LOST'; render();">
+                    ${state.currentUser.role === 'STUDENT' ? 'My Lost Reports' : 'All Lost Reports'}
+                </div>
+            </div>
+
+            <div class="flex-between mt-4">
+                <h3>${state.data.filter === 'LOST' ? 'Lost Items' : 'Recently Found'}</h3>
+                <div style="display: flex; gap: 8px;">
+                    ${state.currentUser.role === 'SECURITY' ? `<button class="btn-primary" style="width: auto; padding: 8px 12px; font-size: 0.875rem;" onclick="navigate('report-found')">Report Found</button>` : ''}
+                    ${state.currentUser.role === 'STUDENT' ? `<button class="btn-secondary" style="width: auto; padding: 8px 12px; font-size: 0.875rem;" onclick="navigate('report-lost')">Report Lost</button>` : ''}
+                    ${state.currentUser.role === 'ADMIN' ? `<button class="btn-secondary" style="width: auto; padding: 8px 12px; font-size: 0.875rem;" onclick="navigate('admin-claims')">Admin Queue</button>` : ''}
+                </div>
+            </div>
+
+            <div id="items-list" class="mt-4">
+                ${filteredItems.length === 0 ? '<p class="text-center">No items found.</p>' : filteredItems.map(item => `
+                    <div class="card mb-4" onclick="navigate('item-detail', { itemId: '${item.id}' })">
+                        <div class="card-header">
+                            <span class="card-title">${item.description}</span>
+                            <span class="badge ${item.type === 'FOUND' ? 'badge-approved' : 'badge-lost'}">${item.type}</span>
+                        </div>
+                        <div class="subtitle" style="margin-bottom: 0; font-size: 0.875rem;">
+                            ${item.location} · ${new Date(item.dateReported).toLocaleDateString()}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    function renderReportFound(container) {
+        container.innerHTML = `
+            <h2>Report Found Item</h2>
+            <p class="subtitle">Log an item handed in at security.</p>
+            <form onsubmit="handleReportItem(event, 'FOUND')">
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" id="rf-category" placeholder="e.g. Electronics, Wallet, Keys" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="rf-desc" placeholder="Detailed description of the item" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Location Found</label>
+                    <input type="text" id="rf-location" placeholder="Where was it found?" required>
+                </div>
+                <div class="form-group">
+                    <label>Date and Time Found</label>
+                    <input type="datetime-local" id="rf-date" required>
+                </div>
+                <div class="form-group">
+                    <label>Serial number or photo (optional)</label>
+                    <input type="file">
+                    <div class="help-text">Only administrators can view this evidence.</div>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn-secondary" onclick="navigate('home')">Cancel</button>
+                    <button type="submit" class="btn-primary">Submit Report</button>
+                </div>
+            </form>
+        `;
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        document.getElementById('rf-date').value = now.toISOString().slice(0, 16);
+    }
+
+    function renderReportLost(container) {
+        container.innerHTML = `
+            <h2>Report Lost Item</h2>
+            <p class="subtitle">Let the system know what you have lost.</p>
+            <form onsubmit="handleReportItem(event, 'LOST')">
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" id="rl-category" placeholder="e.g. Electronics, Wallet, Keys" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="rl-desc" placeholder="Describe your item clearly" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Location Lost</label>
+                    <input type="text" id="rl-location" placeholder="Where did you last see it?" required>
+                </div>
+                <div class="form-group">
+                    <label>Date and Time Lost</label>
+                    <input type="datetime-local" id="rl-date" required>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn-secondary" onclick="navigate('home')">Cancel</button>
+                    <button type="submit" class="btn-primary">Submit Report</button>
+                </div>
+            </form>
+        `;
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        document.getElementById('rl-date').value = now.toISOString().slice(0, 16);
+    }
+
+    function renderItemDetail(container) {
+        const item = db.get('lf_items').find(i => i.id === state.data.itemId);
+        if (!item) return navigate('home');
+
+        const isOwner = item.reporterId === state.currentUser.id;
+        const hasClaimed = db.get('lf_claims').some(c => c.itemId === item.id && c.claimantId === state.currentUser.id && c.status !== 'REJECTED');
+
+        container.innerHTML = `
+            <button class="btn-secondary mb-4" style="width: auto; padding: 8px 12px; font-size: 0.875rem;" onclick="navigate('home')">← Back</button>
+            <h2>${item.description}</h2>
+            
+            <div class="mt-4">
+                <div class="detail-row"><span class="detail-label">Category</span><span class="detail-value">${item.category}</span></div>
+                <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">${item.location}</span></div>
+                <div class="detail-row"><span class="detail-label">Date Reported</span><span class="detail-value">${new Date(item.dateReported).toLocaleString()}</span></div>
+                <div class="detail-row"><span class="detail-label">Report Type</span><span class="detail-value"><span class="badge ${item.type === 'FOUND' ? 'badge-approved' : 'badge-lost'}">${item.type}</span></span></div>
+                
+                ${item.type === 'FOUND' ? `
+                    <div class="detail-row"><span class="detail-label">Serial / Evidence</span><span class="detail-value private-text">Private</span></div>
+                ` : ''}
+            </div>
+
+            ${item.type === 'FOUND' && item.status === 'FOUND' && !isOwner ? `
+                ${hasClaimed 
+                    ? `<div class="alert alert-warning mt-4">You have already submitted a claim for this item. Check "My Claims" for status.</div>`
+                    : `<button class="btn-primary mt-4" onclick="navigate('submit-claim', { itemId: '${item.id}' })">Submit Claim</button>`
+                }
+            ` : ''}
+            
+            ${item.status === 'RESOLVED' ? `<div class="alert alert-success mt-4">This item has been claimed and resolved.</div>` : ''}
+        `;
+    }
+
+    function renderSubmitClaim(container) {
+        const item = db.get('lf_items').find(i => i.id === state.data.itemId);
+        
+        container.innerHTML = `
+            <h2>Submit a Claim</h2>
+            <p class="subtitle">${item.description} · ${item.location}</p>
+
+            <form onsubmit="handleSubmitClaim(event)">
+                <div class="form-group">
+                    <label>Why is this yours? (Required)</label>
+                    <textarea id="claim-statement" placeholder="Provide unique details only the owner would know..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Serial number / Unique Mark (Optional)</label>
+                    <input type="text" id="claim-serial" placeholder="e.g. IMEI number, sticker location">
+                </div>
+                
+                <div class="help-text mb-4" style="padding: 12px; background: var(--bg); border-radius: 8px;">
+                    🔒 <strong>Privacy Notice:</strong> All evidence and statements provided here are strictly confidential and only visible to Administrators.
+                </div>
+
+                <button type="submit" class="btn-primary">Submit Claim</button>
+            </form>
+        `;
+    }
+
+    // --- Admin Views ---
+
+    function renderAdminClaims(container) {
+        if (state.currentUser.role !== 'ADMIN') return navigate('home');
+        
+        const claims = db.get('lf_claims').filter(c => c.status === 'PENDING');
+        
+        container.innerHTML = `
+            <h2>Claim Queue</h2>
+            <p class="subtitle">${claims.length} pending claim(s) requiring review.</p>
+            
+            ${claims.length === 0 ? '<p class="text-center">No pending claims at the moment.</p>' : claims.map(claim => {
+                const item = db.get('lf_items').find(i => i.id === claim.itemId);
+                const claimant = db.get('lf_users').find(u => u.id === claim.claimantId);
+                return `
+                    <div class="card mb-4" onclick="navigate('review-claim', { claimId: '${claim.id}' })">
+                        <div class="card-header">
+                            <span class="card-title">${item.description}</span>
+                            <span class="badge badge-pending">PENDING</span>
+                        </div>
+                        <div class="subtitle" style="margin-bottom: 0; font-size: 0.875rem;">
+                            Claimant: <strong>${claimant.name}</strong> · Submitted: ${new Date(claim.dateSubmitted).toLocaleDateString()}
+                        </div>
+                    </div>
+                `;
+            }).join('')}
+            <button class="btn-secondary mt-4" onclick="navigate('custody-log')">View Chain of Custody Log</button>
+        `;
+    }
+
+    function renderReviewClaim(container) {
+        const claim = db.get('lf_claims').find(c => c.id === state.data.claimId);
+        const item = db.get('lf_items').find(i => i.id === claim.itemId);
+        const claimant = db.get('lf_users').find(u => u.id === claim.claimantId);
+        
+        container.innerHTML = `
+            <h2>Review Claim</h2>
+            <p class="subtitle">Claimant: ${claimant.name} (${claimant.email})</p>
+
+            <div class="detail-row"><span class="detail-label">Item</span><span class="detail-value">${item.description}</span></div>
+            <div class="detail-row"><span class="detail-label">Statement</span><span class="detail-value">"${claim.statement}"</span></div>
+            
+            <div class="form-group mt-4">
+                <label>Private Evidence (Claimant Provided)</label>
+                <div class="evidence-masked" id="evidence-box">
+                    <p style="margin-bottom: 12px; font-weight: 600;">Evidence Hidden</p>
+                    <button class="btn-secondary" style="width: auto; margin: 0 auto;" onclick="document.getElementById('evidence-box').innerHTML = '<p><strong>Serial provided:</strong> ${claim.serial || 'None'}</p><p><strong>System Note:</strong> Matches item report.</p>'">Reveal Evidence</button>
+                </div>
+            </div>
+
+            <div class="form-group mt-4">
+                <label>Reason for Rejection (Required to reject)</label>
+                <textarea id="reject-reason" placeholder="Explain why the claim is rejected so the claimant is notified..."></textarea>
+            </div>
+
+            <div class="btn-group mt-4">
+                <button class="btn-danger" onclick="handleRejectClaim('${claim.id}')">Reject Claim</button>
+                <button class="btn-primary" onclick="handleApproveClaim('${claim.id}')">Approve & Handover</button>
+            </div>
+            <button class="btn-secondary mt-4" onclick="navigate('admin-claims')">Back to Queue</button>
+        `;
+    }
+
+    function renderHandover(container) {
+        const claim = db.get('lf_claims').find(c => c.id === state.data.claimId);
+        const item = db.get('lf_items').find(i => i.id === claim.itemId);
+        const claimant = db.get('lf_users').find(u => u.id === claim.claimantId);
+
+        container.innerHTML = `
+            <div class="alert alert-success">
+                <h2>Claim Approved</h2>
+                <p>The item has been marked as RESOLVED and the handover record is created.</p>
+            </div>
+            
+            <h3>Handover Details</h3>
+            <div class="detail-row"><span class="detail-label">Item</span><span class="detail-value">${item.description}</span></div>
+            <div class="detail-row"><span class="detail-label">Released To</span><span class="detail-value">${claimant.name}</span></div>
+            <div class="detail-row"><span class="detail-label">Date Approved</span><span class="detail-value">${new Date().toLocaleString()}</span></div>
+            
+            <div class="alert alert-warning mt-4">
+                🔒 <strong>Chain of Custody:</strong> An immutable record has been logged for this transaction.
+            </div>
+
+            <button class="btn-primary mt-4" onclick="navigate('admin-claims')">Return to Queue</button>
+            <button class="btn-secondary mt-4" onclick="navigate('custody-log')">View Chain of Custody</button>
+        `;
+    }
+
+    function renderCustodyLog(container) {
+        if (state.currentUser.role !== 'ADMIN') return navigate('home');
+        const logs = db.get('lf_custody').reverse();
+        
+        container.innerHTML = `
+            <h2>Chain of Custody</h2>
+            <p class="subtitle">Immutable audit log of all item status changes.</p>
+            
+            ${logs.length === 0 ? '<p class="text-center">No log entries yet.</p>' : logs.map(log => `
+                <div class="card mb-4" style="border-left: 4px solid var(--primary); cursor: default;">
+                    <div class="flex-between mb-4">
+                        <span class="badge badge-approved">${log.action}</span>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">${new Date(log.timestamp).toLocaleString()}</span>
+                    </div>
+                    <div style="font-weight: 600; font-size: 0.875rem;">Item ID: ${log.itemId}</div>
+                    <div style="font-size: 0.875rem;">Actor: ${log.actorName}</div>
+                    ${log.details ? `<div style="font-size: 0.875rem; margin-top: 4px; color: var(--text-muted);">${log.details}</div>` : ''}
+                </div>
+            `).join('')}
+            
+            <button class="btn-secondary mt-4" onclick="navigate('home')">Back to Home</button>
+        `;
+    }
+
+    // --- My Claims ---
+
+    function renderMyClaims(container) {
+        const claims = db.get('lf_claims').filter(c => c.claimantId === state.currentUser.id).reverse();
+        
+        container.innerHTML = `
+            <h2>My Claims</h2>
+            <p class="subtitle">Track the status of items you have claimed.</p>
+            
+            ${claims.length === 0 ? '<p class="text-center">You have not submitted any claims yet.</p>' : claims.map(claim => {
+                const item = db.get('lf_items').find(i => i.id === claim.itemId);
+                let badgeClass = 'badge-pending';
+                if (claim.status === 'APPROVED') badgeClass = 'badge-approved';
+                if (claim.status === 'REJECTED') badgeClass = 'badge-rejected';
+                
+                return `
+                    <div class="card mb-4" style="cursor: default;">
+                        <div class="card-header">
+                            <span class="card-title">${item.description}</span>
+                            <span class="badge ${badgeClass}">${claim.status}</span>
+                        </div>
+                        <div class="subtitle" style="margin-bottom: 8px;">Submitted: ${new Date(claim.dateSubmitted).toLocaleDateString()}</div>
+                        
+                        ${claim.status === 'APPROVED' ? `
+                            <div class="alert alert-success" style="margin-bottom: 0; padding: 12px;">
+                                Ready for pickup at ${item.location} security desk.
+                            </div>
+                        ` : ''}
+                        ${claim.status === 'REJECTED' ? `
+                            <div class="alert alert-error" style="margin-bottom: 0; padding: 12px;">
+                                Reason: ${claim.rejectReason}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('')}
+            
+            <button class="btn-secondary mt-4" onclick="navigate('home')">Back to Home</button>
+        `;
+    }
+
+    // --- Logic & Handlers ---
+
+    window.handleLogin = function() {
+        const email = document.getElementById('login-email').value;
+        const pass = document.getElementById('login-password').value;
+        const errorDiv = document.getElementById('login-error');
+        
+        const user = db.get('lf_users').find(u => u.email === email && u.password === pass);
+        
+        if (user) {
+            state.currentUser = user;
+            saveSession();
+            navigate('home');
+        } else {
+            errorDiv.textContent = "Invalid email or password. Please try again.";
+            errorDiv.classList.remove('hidden');
+        }
+    }
+
+    window.handleRegister = function() {
+        const name = document.getElementById('reg-name').value;
+        const email = document.getElementById('reg-email').value;
+        const pass = document.getElementById('reg-password').value;
+        const role = document.getElementById('reg-role').value;
+        const errorDiv = document.getElementById('reg-error');
+
+        if (!name || !email || !pass) {
+            errorDiv.textContent = "All fields are required.";
+            errorDiv.classList.remove('hidden');
+            return;
+        }
+
+        const users = db.get('lf_users');
+        if (users.find(u => u.email === email)) {
+            errorDiv.textContent = "An account with this email already exists.";
+            errorDiv.classList.remove('hidden');
+            return;
+        }
+
+        const newUser = { id: 'U-' + Date.now(), name, email, password: pass, role };
+        users.push(newUser);
+        db.set('lf_users', users);
+
+        state.currentUser = newUser;
+        saveSession();
+        navigate('home');
+    }
+
+    window.handleReportItem = function(e, type) {
+        e.preventDefault();
+        
+        const id = 'ITM-' + Math.floor(1000 + Math.random() * 9000);
+        const category = document.getElementById(type === 'FOUND' ? 'rf-category' : 'rl-category').value;
+        const desc = document.getElementById(type === 'FOUND' ? 'rf-desc' : 'rl-desc').value;
+        const location = document.getElementById(type === 'FOUND' ? 'rf-location' : 'rl-location').value;
+        const date = document.getElementById(type === 'FOUND' ? 'rf-date' : 'rl-date').value;
+
+        const newItem = {
+            id,
+            category,
+            description: desc,
+            location,
+            dateReported: new Date(date).toISOString(),
+            type: type,
+            status: type === 'FOUND' ? 'FOUND' : 'LOST',
+            reporterId: state.currentUser.id
+        };
+
+        const items = db.get('lf_items');
+        items.push(newItem);
+        db.set('lf_items', items);
+
+        // Log to Chain of Custody
+        const custody = db.get('lf_custody');
+        custody.push({
+            logId: 'LOG-' + Date.now(),
+            itemId: id,
+            action: type === 'FOUND' ? 'ITEM_LOGGED_FOUND' : 'ITEM_REPORTED_LOST',
+            actorName: state.currentUser.name,
+            timestamp: new Date().toISOString(),
+            details: `Initial report created at ${location}.`
+        });
+        db.set('lf_custody', custody);
+
+        alert(`Successfully reported ${type.toLowerCase()} item.`);
+        navigate('home');
+    }
+
+    window.handleSubmitClaim = function(e) {
+        e.preventDefault();
+        
+        const statement = document.getElementById('claim-statement').value;
+        const serial = document.getElementById('claim-serial').value;
+        
+        const claims = db.get('lf_claims');
+        const newClaim = {
+            id: 'CLM-' + Math.floor(1000 + Math.random() * 9000),
+            itemId: state.data.itemId,
+            claimantId: state.currentUser.id,
+            statement: statement,
+            serial: serial,
+            status: 'PENDING',
+            dateSubmitted: new Date().toISOString()
+        };
+        
+        claims.push(newClaim);
+        db.set('lf_claims', claims);
+
+        alert("Claim submitted successfully. An administrator will review it shortly.");
+        navigate('my-claims');
+    }
+
+    window.handleApproveClaim = function(claimId) {
+        const claims = db.get('lf_claims');
+        const claim = claims.find(c => c.id === claimId);
+        claim.status = 'APPROVED';
+        db.set('lf_claims', claims);
+
+        // Update item status
+        const items = db.get('lf_items');
+        const item = items.find(i => i.id === claim.itemId);
+        item.status = 'RESOLVED';
+        db.set('lf_items', items);
+
+        // Log to Chain of Custody
+        const custody = db.get('lf_custody');
+        custody.push({
+            logId: 'LOG-' + Date.now(),
+            itemId: item.id,
+            action: 'CLAIM_APPROVED_HANDOVER',
+            actorName: state.currentUser.name,
+            timestamp: new Date().toISOString(),
+            details: `Item handed over to claimant.`
+        });
+        db.set('lf_custody', custody);
+
+        navigate('handover', { claimId: claimId });
+    }
+
+    window.handleRejectClaim = function(claimId) {
+        const reason = document.getElementById('reject-reason').value;
+        if (!reason) {
+            alert("You must provide a reason to reject the claim.");
+            return;
+        }
+
+        const claims = db.get('lf_claims');
+        const claim = claims.find(c => c.id === claimId);
+        claim.status = 'REJECTED';
+        claim.rejectReason = reason;
+        db.set('lf_claims', claims);
+
+        // Log to Chain of Custody
+        const custody = db.get('lf_custody');
+        custody.push({
+            logId: 'LOG-' + Date.now(),
+            itemId: claim.itemId,
+            action: 'CLAIM_REJECTED',
+            actorName: state.currentUser.name,
+            timestamp: new Date().toISOString(),
+            details: `Reason: ${reason}`
+        });
+        db.set('lf_custody', custody);
+
+        alert("Claim rejected.");
+        navigate('admin-claims');
+    }
+
+    // Handle Search
+    window.handleSearch = function() {
+        const query = document.getElementById('search-input').value.toLowerCase();
+        const resultsContainer = document.getElementById('items-list');
+        
+        const allItems = db.get('lf_items');
+        let itemsToSearch = [];
+        
+        if (state.data.filter === 'LOST') {
+            itemsToSearch = allItems.filter(i => i.type === 'LOST');
+            if (state.currentUser.role === 'STUDENT') {
+                itemsToSearch = itemsToSearch.filter(i => i.reporterId === state.currentUser.id);
+            }
+        } else {
+            itemsToSearch = allItems.filter(i => i.type === 'FOUND' && i.status === 'FOUND');
+        }
+        
+        const filtered = itemsToSearch.filter(i => i.description.toLowerCase().includes(query) || i.location.toLowerCase().includes(query));
+        
+        if (filtered.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="text-center mt-4">
+                    <p>No items match your search.</p>
+                    <p class="subtitle">Try different keywords or a wider location.</p>
+                    <button class="btn-secondary" onclick="document.getElementById('search-input').value=''; handleSearch();">Clear Search</button>
+                </div>
+            `;
+        } else {
+            resultsContainer.innerHTML = filtered.map(item => `
+                <div class="card mb-4" onclick="navigate('item-detail', { itemId: '${item.id}' })">
+                    <div class="card-header">
+                        <span class="card-title">${item.description}</span>
+                        <span class="badge ${item.type === 'FOUND' ? 'badge-approved' : 'badge-lost'}">${item.type}</span>
+                    </div>
+                    <div class="subtitle" style="margin-bottom: 0; font-size: 0.875rem;">
+                        ${item.location} · ${new Date(item.dateReported).toLocaleDateString()}
+                    </div>
+                </div>
+            `).join('');
+        }
+    };
+
+    // Initialize
+    render();
+</script>
+</body>
+</html>
